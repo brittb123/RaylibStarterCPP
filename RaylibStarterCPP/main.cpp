@@ -44,15 +44,20 @@ unsigned int elfHash(unsigned char* data)
     return  (hash & 0x7FFFFFFF);
 }
 
+// A function that takes a string and changes to a specific id as well as change the color of the background.
 unsigned int hash(unsigned char* data)
 {
     unsigned int hash = 0;
 
+    // A for loop that checks if data is null 
     for (unsigned char* i = data; *i != '\0'; ++i)
     {
-        hash = (hash * 2525) + data[1];
+
+    // Then set the hash to be dataand multiply by a number to give it a specific hash id
+       hash = (hash * 2525) + data[1];
     }
 
+    // Returns the hash in a specific id of the string put in
     return (hash & 0x7FFFFFFF);
 }
 
