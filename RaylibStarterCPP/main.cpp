@@ -50,7 +50,7 @@ unsigned int hash(unsigned char* data)
 
     for (unsigned char* i = data; *i != '\0'; ++i)
     {
-        hash = (hash * 115) + data[1];
+        hash = (hash * 2525) + data[1];
     }
 
     return (hash & 0x7FFFFFFF);
